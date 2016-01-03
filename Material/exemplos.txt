@@ -1,0 +1,18 @@
+Administração: http://localhost:7001/console/
+Usuario: weblogic
+Senha: welcome1
+
+Derby: WL_HOME\common\derby
+Versão: 10.6.1.0
+
+Domínio: WL_HOME\samples\domains\wl_server
+Código: WL_HOME\samples\server\examples\src\examples
+Site: http://localhost:7001/examplesWebApp/index.jsp
+
+Domínio: WL_HOME\samples\domains\medrec
+Código: WL_HOME\samples\server\medrec
+Site: http://localhost:7011/medrec/
+
+Domínio: WL_HOME\samples\domains\medrec-spring
+Código: WL_HOME\samples\server\medrec-spring
+Site: http://localhost:7011/medrec/
