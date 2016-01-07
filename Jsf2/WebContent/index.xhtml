@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+<title>JSF Exemplo 2</title>
+</head>
+
+<body>
+	<h:form>
+		<h:panelGrid columns="3">
+			Nome:
+			<h:inputText id="txtNome" required="true" value="#{dadosBean.cliente.nome}">
+				<f:validateLength for="txtTexto" maximum="20" minimum="1" />
+			</h:inputText>
+			<h:message for="txtNome" />
+			Idade:
+			<h:inputText id="txtIdade" value="#{dadosBean.cliente.idade}">
+				<f:validateLongRange minimum="1" />
+			</h:inputText>
+			<h:message for="txtIdade" />
+			Cpf:
+			<h:inputText id="txtCpf" required="true" value="#{dadosBean.cliente.cpf}">
+				<f:converter converterId="cpfConversor"/>
+			</h:inputText>
+			<h:message for="txtCpf" />
+		</h:panelGrid>
+		<h:commandButton id="btEnviar" value="Enviar" action="resultado"/>
+	</h:form>
+</body>
+</html>
