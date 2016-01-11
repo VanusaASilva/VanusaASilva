@@ -13,11 +13,11 @@ public class Teste {
 
     public static void main(String[] args) {
         //Codigo de obtencao do EntityManager modo gerenciado pelo aplicativo
-        EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("LivrosConsolePU");
+        EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("Jpa1");
         EntityManager gerenciador = fabrica.createEntityManager();
         try {
-            exemploRelacionamentoCascade(gerenciador);
-            //exemploPrincipal(gerenciador);
+            //exemploRelacionamentoCascade(gerenciador);
+            exemploPrincipal(gerenciador);
         } catch (Exception e) {
             System.out.println(e);
             System.out.println(e.getCause());
